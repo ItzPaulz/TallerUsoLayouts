@@ -2,11 +2,46 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TallerUsoLayouts.StackLayout"
-             Title="StackLayout">
+             Title="PAGINA 2">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Roberto Felipe Guaña Romero"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="32"
+            FontFamily="Arial"
+            FontAttributes="Bold"
+            TextColor="Blue" 
+            
+        />
+
+        <Label 
+            Text="USO DE LAYOUTS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="15"
+            FontFamily="Times New Roman"
+            FontAttributes="None"
+            TextColor="Green" 
+    
+        />
+
+        <Label 
+            Text="Programación IV"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="90"
+            FontFamily="Verdana"
+            FontAttributes="Italic"
+            TextColor="Red" 
+    
+        />
+
+        <Button
+            x:Name="BotonPage2"
+            Text="Ir a Pagina 3"
+            Clicked="BotonPage2_Clicked"
+            HorizontalOptions="Fill"/>
+
     </VerticalStackLayout>
 </ContentPage>
