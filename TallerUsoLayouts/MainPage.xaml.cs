@@ -20,6 +20,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private async void siguiente_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GridLayout());
+        }
     }
 
 }
