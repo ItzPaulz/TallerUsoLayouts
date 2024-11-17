@@ -2,11 +2,74 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TallerUsoLayouts.FlexLayout"
-             Title="FlexLayout">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="PAGINA 3">
+
+
+    <ScrollView>
+        <StackLayout>
+
+            <!-- Primer FlexLayout para la imagen y el texto -->
+            <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="Start">
+                <!-- Imagen con gesto de toque para navegar -->
+                <Image Source="paulpool.jpeg" WidthRequest="250" HeightRequest="250">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!-- Texto al lado de la imagen -->
+                <Label Text="¡SE BUSCA!&#x0a;
+Nombre: Paul Larrea &#x0a;
+Descripción: Este sujeto fue quien provocó los incendios en Quito el pasado mes de Octubre. Conocido como alias (POOL)&#x0a;
+Por favor difundan &#x0a;
+Recompensa: $100.000"
+                   Padding="20,0,0,0"
+                   WidthRequest="400"
+                   FontSize="25"
+                   FontFamily="Times New Roman"
+                   FontAttributes="Italic"
+                   TextColor="Green" />
+            </FlexLayout>
+
+            <!-- Segundo FlexLayout para la imagen y el texto -->
+            <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="Start">
+                <!-- Imagen con gesto de toque para navegar -->
+                <Image Source="barca.png" WidthRequest="250" HeightRequest="250">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!-- Texto al lado de la imagen  -  LineBreakMode="WordWrap" -->
+                <Label Text="El Fútbol Club Barcelona, conocido popularmente como Barça,​ es una entidad polideportiva con sede en Barcelona. Fue fundado como club de fútbol el 29 de noviembre de 1899 y registrado oficialmente el 5 de enero de 1903"
+                   Padding="20,0,0,0"
+                   FontSize="25"    
+                   WidthRequest="400"
+                   FontFamily="Times New Roman"
+                   FontAttributes="Italic"
+                   TextColor="SlateGrey" />
+            </FlexLayout>
+
+
+            <!-- tercer FlexLayout para la imagen y el texto -->
+            <FlexLayout Direction="Row" AlignItems="Start" JustifyContent="Start">
+                <!-- Imagen con gesto de toque para navegar -->
+                <Image Source="ok.jpg" WidthRequest="250" HeightRequest="250">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnImageTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!-- Texto al lado de la imagen -->
+                <Label Text="MEME OK"
+                       Padding="20,0,0,0"
+                       FontSize="25"
+                       FontFamily="Times New Roman"
+                       FontAttributes="Italic"
+                       TextColor="Black" />
+            </FlexLayout>
+
+        </StackLayout>
+
+    </ScrollView>
 </ContentPage>
